@@ -24,18 +24,18 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### 3. Scroll Reveal & Content Presentation
 
-- [ ] **SCRO-01**: AOS (Animate On Scroll) integrated and configured with smooth hardware-accelerated easing.
-- [ ] **SCRO-02**: Staggered scroll reveals for project cards, skill badges, and timeline entries.
-- [ ] **SCRO-03**: Full `prefers-reduced-motion` compliance: all animations gracefully collapse to instant or subtle opacity fades when requested.
+- [x] **SCRO-01**: AOS (Animate On Scroll) integrated and configured with smooth hardware-accelerated easing.
+- [x] **SCRO-02**: Staggered scroll reveals for project cards, skill badges, and timeline entries.
+- [x] **SCRO-03**: Full `prefers-reduced-motion` compliance: all animations gracefully collapse to instant or subtle opacity fades when requested.
 
 ### 4. Interactive Components & Portfolio Sections
 
-- [ ] **COMP-01**: Hero section with glitch headline typography, subtitle, and primary call-to-actions ("Explore Projects", "Initialize Contact").
-- [ ] **COMP-02**: Interactive Cyber Terminal / CLI component supporting commands: `help`, `about`, `skills`, `projects`, `clear`, `contact`.
-- [ ] **COMP-03**: Skills matrix categorized into Frontend, Backend, 3D/Graphics, DevOps, and Tooling with glowing progress telemetry.
-- [ ] **COMP-04**: Featured Projects gallery with interactive 3D card tilt effect (`transform-style: preserve-3d`), live demo links, source code badges, and tech tags.
-- [ ] **COMP-05**: Experience & Education Timeline with interactive futuristic milestone nodes.
-- [ ] **COMP-06**: Futuristic Contact HUD with direct email link, copy-to-clipboard feedback, social link pills (GitHub, LinkedIn, X, Discord), and contact form.
+- [x] **COMP-01**: Hero section with glitch headline typography, subtitle, and primary call-to-actions ("Explore Projects", "Initialize Contact").
+- [x] **COMP-02**: Interactive Cyber Terminal / CLI component supporting commands: `help`, `about`, `skills`, `projects`, `clear`, `contact`.
+- [x] **COMP-03**: Skills matrix categorized into Frontend, Backend, 3D/Graphics, DevOps, and Tooling with glowing progress telemetry.
+- [x] **COMP-04**: Featured Projects gallery with interactive 3D card tilt effect (`transform-style: preserve-3d`), live demo links, source code badges, and tech tags.
+- [x] **COMP-05**: Experience & Education Timeline with interactive futuristic milestone nodes.
+- [x] **COMP-06**: Futuristic Contact HUD with direct email link, copy-to-clipboard feedback, social link pills (GitHub, LinkedIn, X, Discord), and contact form.
 
 ### 5. Performance, Accessibility & Verification
 
