@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { QuantumCore } from './quantumCore';
+import { TechSphere } from './techSphere';
 import { ParticleField } from './particleField';
 
 export class SceneManager {
@@ -8,7 +8,7 @@ export class SceneManager {
   private camera: THREE.PerspectiveCamera;
   private renderer: THREE.WebGLRenderer;
 
-  private quantumCore: QuantumCore;
+  private techSphere: TechSphere;
   private particleField: ParticleField;
 
   private mouseX: number = 0;
@@ -46,7 +46,7 @@ export class SceneManager {
     this.renderer.setSize(width, height);
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
-    this.renderer.toneMappingExposure = 1.1;
+    this.renderer.toneMappingExposure = 1.15;
 
     // Clear previous children and append canvas
     this.container.innerHTML = '';
@@ -56,8 +56,8 @@ export class SceneManager {
     this.setupLighting();
 
     // 5. Meshes
-    this.quantumCore = new QuantumCore();
-    this.scene.add(this.quantumCore.group);
+    this.techSphere = new TechSphere();
+    this.scene.add(this.techSphere.group);
 
     this.particleField = new ParticleField();
     this.scene.add(this.particleField.points);
@@ -72,32 +72,31 @@ export class SceneManager {
 
   private setupLighting() {
     // Ambient cyan atmospheric wash
-    const ambientLight = new THREE.AmbientLight(0x00f0ff, 0.6);
+    const ambientLight = new THREE.AmbientLight(0x00e5ff, 0.5);
     this.scene.add(ambientLight);
 
-    // Key directional light
-    const keyLight = new THREE.DirectionalLight(0xffffff, 1.2);
-    keyLight.position.set(5, 5, 5);
+    // Key directional light for crisp facet reflections
+    const keyLight = new THREE.DirectionalLight(0xffffff, 1.4);
+    keyLight.position.set(6, 6, 6);
     this.scene.add(keyLight);
 
-    // Cyber Cyan Rim Light
-    const cyanLight = new THREE.PointLight(0x00f0ff, 3, 20);
-    cyanLight.position.set(3, 2, 3);
+    // Cyan Rim Light focused on the right-column 3D model
+    const cyanLight = new THREE.PointLight(0x00e5ff, 3.2, 18);
+    cyanLight.position.set(4, 2, 4);
     this.scene.add(cyanLight);
 
     // Electric Blue Fill Light
-    const blueLight = new THREE.PointLight(0x0077ff, 2.5, 20);
-    blueLight.position.set(-3, -2, 2);
+    const blueLight = new THREE.PointLight(0x0a84ff, 2.8, 18);
+    blueLight.position.set(0, -3, 3);
     this.scene.add(blueLight);
 
-    // Magenta accent light
-    const pinkLight = new THREE.PointLight(0xff0055, 1.8, 15);
-    pinkLight.position.set(0, -3, 3);
-    this.scene.add(pinkLight);
+    // Soft emerald specular accent
+    const emeraldLight = new THREE.PointLight(0x30d158, 1.6, 12);
+    emeraldLight.position.set(2, 4, -2);
+    this.scene.add(emeraldLight);
   }
 
   private initEventListeners() {
-    // Window Resize
     window.addEventListener('resize', this.onWindowResize.bind(this));
 
     // Mouse Tracking (Normalized -1 to 1)
@@ -162,15 +161,17 @@ export class SceneManager {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     if (!prefersReducedMotion) {
-      // Update Quantum Core
-      this.quantumCore.update(this.mouseX, this.mouseY, this.scrollProgress);
+      const isMobile = window.innerWidth <= 992;
 
-      // Update Particle Constellation
+      // Update 3D Tech Sphere Centerpiece
+      this.techSphere.update(this.mouseX, this.mouseY, this.scrollProgress, isMobile);
+
+      // Update Deep Ambient Starlight
       this.particleField.update(this.mouseX, this.mouseY, elapsed);
 
       // Subtle camera parallax motion
-      this.camera.position.x = this.mouseX * 0.35;
-      this.camera.position.y = this.mouseY * 0.25 - this.scrollProgress * 1.5;
+      this.camera.position.x = this.mouseX * 0.25;
+      this.camera.position.y = this.mouseY * 0.15;
     }
 
     this.renderer.render(this.scene, this.camera);
@@ -182,7 +183,7 @@ export class SceneManager {
       cancelAnimationFrame(this.animationFrameId);
     }
     window.removeEventListener('resize', this.onWindowResize.bind(this));
-    this.quantumCore.dispose();
+    this.techSphere.dispose();
     this.particleField.dispose();
     this.renderer.dispose();
   }
