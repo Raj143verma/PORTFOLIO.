@@ -1,0 +1,217 @@
+/* ==========================================================================
+   HUD OVERLAYS, SCANLINES & TACTICAL ELEMENTS
+   ========================================================================== */
+
+/* Fullscreen Background WebGL Canvas */
+#webgl-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+#webgl-container canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: auto; /* Allow mouse interaction directly on canvas */
+}
+
+/* Base Body Setup */
+.cyber-body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-void);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  position: relative;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle HUD Grid Overlay */
+.hud-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background-image: 
+    linear-gradient(to right, rgba(0, 240, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 240, 255, 0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* CRT Scanline Effect (Ultra subtle) */
+.hud-scanline {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.15) 50%
+  );
+  background-size: 100% 4px;
+  opacity: 0.4;
+}
+
+/* Subtle Vignette */
+.hud-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    transparent 50%,
+    rgba(5, 8, 14, 0.8) 100%
+  );
+}
+
+/* Tactical Corner Brackets */
+.hud-corner {
+  position: fixed;
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--neon-cyan);
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.hud-corner.top-left {
+  top: 12px;
+  left: 12px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.hud-corner.top-right {
+  top: 12px;
+  right: 12px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.hud-corner.bottom-left {
+  bottom: 12px;
+  left: 12px;
+  border-right: none;
+  border-top: none;
+}
+
+.hud-corner.bottom-right {
+  bottom: 12px;
+  right: 12px;
+  border-left: none;
+  border-top: none;
+}
+
+/* Tactical HUD Badge */
+.hud-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: rgba(0, 240, 255, 0.08);
+  border: 1px solid var(--border-hud);
+  border-radius: 2px;
+  color: var(--neon-cyan);
+}
+
+.hud-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--neon-emerald);
+  box-shadow: 0 0 8px var(--neon-emerald);
+  animation: pulse-dot 2s infinite ease-in-out;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+/* Glassmorphic Panel Cards */
+.cyber-card {
+  background: var(--bg-card);
+  backdrop-filter: var(--backdrop-blur);
+  -webkit-backdrop-filter: var(--backdrop-blur);
+  border: 1px solid var(--border-hud);
+  border-radius: 8px;
+  padding: 24px;
+  position: relative;
+  transition: all var(--transition-normal);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
+}
+
+.cyber-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--neon-cyan);
+  box-shadow: 0 12px 40px 0 rgba(0, 240, 255, 0.15);
+  transform: translateY(-4px);
+}
+
+/* Glitch Typography Effect */
+.cyber-glitch {
+  position: relative;
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+
+.cyber-glitch::before,
+.cyber-glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+}
+
+.cyber-glitch::before {
+  left: -2px;
+  text-shadow: 2px 0 var(--neon-pink);
+  animation: glitch-anim-1 3s infinite linear alternate-reverse;
+}
+
+.cyber-glitch::after {
+  left: 2px;
+  text-shadow: -2px 0 var(--neon-cyan);
+  clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+  animation: glitch-anim-2 2.5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim-1 {
+  0%, 90% { transform: translate(0); }
+  92% { transform: translate(-2px, 1px); }
+  94% { transform: translate(1px, -1px); }
+  96% { transform: translate(-1px, 2px); }
+  98% { transform: translate(2px, -1px); }
+  100% { transform: translate(0); }
+}
+
+@keyframes glitch-anim-2 {
+  0%, 88% { transform: translate(0); }
+  90% { transform: translate(2px, -1px); }
+  93% { transform: translate(-1px, 2px); }
+  97% { transform: translate(1px, 1px); }
+  100% { transform: translate(0); }
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  .cyber-glitch::before,
+  .cyber-glitch::after,
+  .hud-badge-dot {
+    animation: none !important;
+  }
+}

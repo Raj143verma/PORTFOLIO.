@@ -1,12 +1,30 @@
-# PROJECT: Futuristic 3D Developer Portfolio
+# PROJECT: Futuristic 3D Developer Portfolio — Raj Kumar Verma
 
 ## What This Is
 
-A high-performance, visually striking 3D personal developer portfolio website featuring interactive WebGL/Three.js 3D elements, cybernetic HUD/glassmorphic aesthetics, and smooth scroll-triggered animations. It presents the developer's identity, technical arsenal, featured projects, and contact avenues with cutting-edge visual presentation and uncompromising engineering rigor.
+A high-performance, visually striking 3D personal developer portfolio website for **Raj Kumar Verma** (Full-Stack Developer / SDE). It features interactive WebGL/Three.js 3D elements, cybernetic HUD/glassmorphic aesthetics, smooth scroll-triggered animations, and an interactive hacker terminal showcasing his engineering projects, technical stack, internships, and achievements.
+
+## Profile & Resume Baseline
+- **Identity:** Raj Kumar Verma
+- **Title:** Full-Stack Developer (MERN) / Software Development Engineer (SDE)
+- **Contact:** rajvermause@gmail.com | +91 7970908458 | Giridih, Jharkhand, India
+- **Education:** B.E. in Computer Science & Engineering, University Institute of Technology, Burdwan University (Expected Graduation: Aug 2027)
+- **Core Experience:** Full-Stack Development Intern at Vaidsys Technologies (Apr 2026 – May 2026)
+- **Flagship Projects:**
+  1. **AI Resume & Job Fit Analyzer** (React, Node.js, Express.js, Groq AI API, JWT, REST APIs, Axios)
+  2. **StayGenie - Real Estate Platform** (React.js, Node.js, Bootstrap, EJS, JWT, MVC Architecture, Map API)
+  3. **BankCore API** (Node.js, Express.js, JWT, bcrypt, REST API, double-entry ledger system)
+- **Technical Skills:**
+  - *Languages:* JavaScript (ES6+), Java, Python, C, C++
+  - *Frontend:* React.js, React Router, Tailwind CSS, Bootstrap, HTML5, CSS3, Axios, EJS
+  - *Backend:* Node.js, Express.js, REST APIs, JWT, bcrypt, OAuth
+  - *Databases & ORM:* MongoDB, Mongoose, MySQL, Prisma
+  - *Tools & DevOps:* Git, GitHub, Postman, Nodemon, dotenv, Cloudinary, AWS (Basics), Render
+  - *CS Fundamentals:* DSA, OOP, OS, Computer Networks, Software Engineering
 
 ## Core Value
 
-Deliver an unforgettable, futuristic 3D visual experience that showcases elite engineering capabilities while maintaining ultra-fast load times, flawless 60fps rendering, and WCAG AA accessibility.
+Deliver an unforgettable, futuristic 3D visual experience that showcases Raj Kumar Verma's elite engineering capabilities while maintaining ultra-fast load times, flawless 60fps rendering, and WCAG AA accessibility.
 
 ## Tech Stack & Architecture
 

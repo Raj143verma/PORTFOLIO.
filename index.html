@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raj Kumar Verma // Full-Stack Developer & SDE // 3D Cyber HUD</title>
+    <meta name="description" content="Futuristic 3D Developer Portfolio of Raj Kumar Verma. Full-Stack MERN & AI Systems Developer." />
+    
+    <!-- Preconnect Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..800&family=JetBrains+Mono:wght@300;400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="cyber-body">
+    <!-- WebGL Background Canvas Container -->
+    <div id="webgl-container" aria-hidden="true"></div>
+
+    <!-- HUD Grid and Scanline Overlays -->
+    <div class="hud-overlay" aria-hidden="true">
+      <div class="hud-scanline"></div>
+      <div class="hud-vignette"></div>
+      <div class="hud-corner top-left"></div>
+      <div class="hud-corner top-right"></div>
+      <div class="hud-corner bottom-left"></div>
+      <div class="hud-corner bottom-right"></div>
+    </div>
+
+    <!-- Application App Root -->
+    <div id="app"></div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
