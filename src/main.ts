@@ -54,7 +54,7 @@ if (app) {
         <!-- Left Column: Primary Typography & Call to Actions -->
         <div class="hero-content">
           <div class="hud-badge mb-4" data-aos="fade-down">
-            <span class="hud-badge-dot" aria-hidden="true"></span>
+            <img src="/raj_verma.jpg" alt="Raj Kumar Verma" class="hero-badge-avatar" width="22" height="22" />
             <span>Full-Stack Engineer / Distributed Systems</span>
           </div>
           

@@ -14,12 +14,23 @@ export function renderAboutSection(): HTMLElement {
     </div>
 
     <div class="about-grid">
-      <!-- Left Column: Bio Card -->
+      <!-- Left Column: Bio Card with Photo -->
       <div class="cyber-card about-card" data-aos="fade-right" data-aos-delay="100">
-        <div class="card-header-bar">
-          <span class="hud-mono-label">Profile Overview</span>
-          <span class="hud-status-indicator">Verified</span>
+        <div class="about-card-top">
+          <div class="about-photo-wrapper">
+            <img src="/raj_verma.jpg" alt="Raj Kumar Verma" class="about-photo" width="110" height="110" loading="lazy" />
+          </div>
+          <div class="about-identity-meta">
+            <div class="card-header-bar">
+              <span class="hud-mono-label">Profile Overview</span>
+              <span class="hud-status-indicator">Verified</span>
+            </div>
+            <h3 class="about-name">Raj Kumar Verma</h3>
+            <span class="about-title font-mono text-cyber">Full-Stack Developer / SDE</span>
+            <span class="about-org font-mono">B.E. Computer Science, Burdwan Univ ('27)</span>
+          </div>
         </div>
+
         <p class="about-text">
           I am a <strong>Full-Stack Developer</strong> and Computer Science Engineer specializing in the <strong>MERN stack</strong> and modern AI pipeline integration. My engineering journey centers on building reliable web applications with production-grade security, from <strong>JWT &amp; RBAC authentication architectures</strong> to <strong>double-entry financial ledgers</strong> ensuring strict atomic transaction consistency.
         </p>

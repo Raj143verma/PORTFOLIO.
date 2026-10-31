@@ -491,6 +491,17 @@ button {
   margin-bottom: 16px;
 }
 
+/* Hero Badge Portrait Avatar */
+.hero-badge-avatar {
+  width: 22px;
+  height: 22px;
+  border-radius: var(--radius-pill);
+  object-fit: cover;
+  object-position: center 15%;
+  border: 1px solid var(--border-cyan-subtle);
+  display: inline-block;
+}
+
 /* ==========================================================================
    ABOUT & METRICS STYLES
    ========================================================================== */
@@ -504,6 +515,72 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+/* About Card Executive Profile Header */
+.about-card-top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-separator);
+}
+
+.about-photo-wrapper {
+  position: relative;
+  width: 104px;
+  height: 104px;
+  flex-shrink: 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-pill-hover);
+  box-shadow: var(--shadow-badge);
+}
+
+.about-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+  display: block;
+  transition: transform var(--transition-normal);
+}
+
+.about-photo-wrapper:hover .about-photo {
+  transform: scale(1.06);
+}
+
+.about-identity-meta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.about-identity-meta .card-header-bar {
+  margin-bottom: 6px;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.about-name {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.about-title {
+  font-size: 0.82rem;
+  color: var(--color-cyan);
+}
+
+.about-org {
+  font-size: 0.78rem;
+  color: var(--text-muted);
 }
 
 .card-header-bar {
@@ -1368,6 +1445,12 @@ button {
 }
 
 @media (max-width: 600px) {
+  .about-card-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
   .about-metrics-col {
     grid-template-columns: 1fr;
   }
