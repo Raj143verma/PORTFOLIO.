@@ -9,9 +9,9 @@ export function renderNavbar(): HTMLElement {
 
   header.innerHTML = `
     <div class="container hud-nav-inner">
-      <a href="#hero" class="hud-logo" aria-label="Raj Kumar Verma Home">
-        <span>Raj Kumar Verma</span>
-        <span class="hud-logo-tag">Full-Stack / SDE</span>
+      <a href="#hero" class="hud-logo" aria-label="Raj Kumar Verma">
+        <span class="hud-logo-symbol" aria-hidden="true">RV</span>
+        <span class="hud-logo-text">Raj Verma<span class="hud-logo-dot">.</span></span>
       </a>
 
       <nav aria-label="Main Navigation">

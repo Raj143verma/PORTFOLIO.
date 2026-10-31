@@ -87,25 +87,56 @@ button {
 }
 
 .hud-logo {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.05rem;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.hud-logo:hover {
+  transform: translateY(-1px);
+}
+
+.hud-logo-symbol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  background: var(--color-cyan-tint);
+  border: 1px solid var(--border-cyan-subtle);
+  color: var(--color-cyan);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  box-shadow: var(--shadow-badge);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+}
+
+.hud-logo:hover .hud-logo-symbol {
+  border-color: var(--color-cyan);
+  box-shadow: var(--shadow-glow-cyan);
+  background-color: var(--bg-glass-pill-hover);
+}
+
+.hud-logo-text {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.02rem;
+  letter-spacing: -0.02em;
   color: var(--text-primary);
 }
 
-.hud-logo-tag {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 500;
-  padding: 4px 10px;
-  background: var(--bg-glass-pill);
-  border: 1px solid var(--border-pill);
-  border-radius: var(--radius-xs);
-  color: var(--text-secondary);
+.hud-logo-dot {
+  color: var(--color-cyan);
 }
 
 /* Nav Links */
