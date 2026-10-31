@@ -32,8 +32,8 @@ export function renderNavbar(): HTMLElement {
           <span id="sound-icon" aria-hidden="true">${isMuted ? '🔇' : '🔊'}</span>
         </button>
 
-        <a href="#contact" class="btn-cyber-primary btn-nav-cta">
-          <span>Get in Touch</span>
+        <a href="/Raj_Kumar_Verma_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-cyber-primary btn-nav-cta" aria-label="Open Resume in new tab">
+          <span>Resume</span>
         </a>
 
         <button id="mobile-nav-toggle" class="hud-mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">

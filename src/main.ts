@@ -69,11 +69,11 @@ if (app) {
           <a href="#projects" class="btn-cyber-primary" id="btn-hero-projects">
             <span>Explore Projects</span>
           </a>
+          <a href="/Raj_Kumar_Verma_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-cyber-secondary" id="btn-hero-resume" aria-label="Open Resume in new tab">
+            <span>Resume</span>
+          </a>
           <a href="#terminal" class="btn-cyber-secondary" id="btn-hero-terminal">
             <span>Terminal CLI</span>
-          </a>
-          <a href="#contact" class="btn-cyber-secondary" id="btn-hero-contact">
-            <span>Get in Touch</span>
           </a>
         </div>
 

@@ -80,6 +80,7 @@ export function renderTerminalSection(): HTMLElement {
                 <div><span class="text-cyber">skills</span> &mdash; Display technical arsenal</div>
                 <div><span class="text-cyber">projects</span> &mdash; Inspect production applications</div>
                 <div><span class="text-cyber">exp</span> &mdash; View career history &amp; academics</div>
+                <div><span class="text-cyber">resume</span> &mdash; Open official resume document</div>
                 <div><span class="text-cyber">contact</span> &mdash; Reach out to Raj Kumar Verma</div>
                 <div><span class="text-cyber">whoami</span> &mdash; Show current operative session</div>
                 <div><span class="text-cyber">matrix</span> &mdash; Activate cyber stream visualization</div>
@@ -125,6 +126,19 @@ export function renderTerminalSection(): HTMLElement {
               <p>- 15+ RBAC routes for 50+ concurrent users managing 1,000+ content assets.</p>
               <p>- Reduced publication time from 30 minutes to &lt;2 minutes (93% reduction).</p>
             `;
+            break;
+
+          case 'resume':
+            sound.playConfirm();
+            responseLine.innerHTML = `
+              <p>Opening official resume: <a href="/Raj_Kumar_Verma_Resume.pdf" target="_blank" rel="noopener" class="text-cyber">/Raj_Kumar_Verma_Resume.pdf</a></p>
+              <p class="text-muted">(If popup was blocked, click the link above to view or download)</p>
+            `;
+            try {
+              window.open('/Raj_Kumar_Verma_Resume.pdf', '_blank');
+            } catch {
+              // Popup blocked, user can click link
+            }
             break;
 
           case 'contact':
