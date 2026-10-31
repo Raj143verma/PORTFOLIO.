@@ -6,9 +6,9 @@ export function renderExperienceSection(): HTMLElement {
     <div class="section-header" data-aos="fade-up">
       <div class="section-tag">
         <span class="hud-badge-dot" aria-hidden="true"></span>
-        <span>// 05 // CAREER TIMELINE &amp; EDUCATION</span>
+        <span>05 &bull; Experience &amp; Education</span>
       </div>
-      <h2 class="section-title">EXPERIENCE &amp; ACADEMICS</h2>
+      <h2 class="section-title">Career &amp; Education</h2>
       <p class="section-subtitle">
         Hands-on engineering roles, production impact metrics, and computer science foundations.
       </p>
@@ -25,10 +25,10 @@ export function renderExperienceSection(): HTMLElement {
         <div class="cyber-card timeline-card">
           <div class="timeline-card-header">
             <div>
-              <span class="timeline-role text-cyber font-mono">FULL-STACK DEVELOPMENT INTERN</span>
+              <span class="timeline-role text-cyber font-mono">Full-Stack Development Intern</span>
               <h3 class="timeline-company">Vaidsys Technologies</h3>
             </div>
-            <span class="timeline-date font-mono">APR 2026 &mdash; MAY 2026</span>
+            <span class="timeline-date font-mono">Apr 2026 &mdash; May 2026</span>
           </div>
 
           <ul class="timeline-bullets">
@@ -66,10 +66,10 @@ export function renderExperienceSection(): HTMLElement {
         <div class="cyber-card timeline-card">
           <div class="timeline-card-header">
             <div>
-              <span class="timeline-role text-cyber font-mono">BACHELOR OF ENGINEERING (B.E.) &bull; CSE</span>
+              <span class="timeline-role text-cyber font-mono">Bachelor of Engineering (B.E.) &bull; CSE</span>
               <h3 class="timeline-company">University Institute of Technology, Burdwan University</h3>
             </div>
-            <span class="timeline-date font-mono">EXPECTED GRADUATION: AUG 2027</span>
+            <span class="timeline-date font-mono">Expected: Aug 2027</span>
           </div>
 
           <p class="timeline-summary-text">
@@ -77,7 +77,7 @@ export function renderExperienceSection(): HTMLElement {
           </p>
 
           <div class="coursework-box">
-            <span class="coursework-title font-mono text-cyber">RELEVANT COURSEWORK:</span>
+            <span class="coursework-title font-mono text-cyber">Relevant Coursework</span>
             <p class="coursework-list">
               Data Structures &amp; Algorithms, Object-Oriented Programming (OOP), Database Management Systems (DBMS), Operating Systems, Computer Networks, and Software Engineering.
             </p>

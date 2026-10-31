@@ -8,11 +8,11 @@ export function renderTerminalSection(): HTMLElement {
     <div class="section-header" data-aos="fade-up">
       <div class="section-tag">
         <span class="hud-badge-dot" aria-hidden="true"></span>
-        <span>// INTERACTIVE PROTOCOL // TERMINAL CLI</span>
+        <span>Interactive Shell</span>
       </div>
-      <h2 class="section-title">COMMAND LINE INTERFACE</h2>
+      <h2 class="section-title">Developer Terminal</h2>
       <p class="section-subtitle">
-        Direct shell access into the portfolio database. Type <code class="cyber-code">help</code> to list available commands.
+        Direct shell access into the portfolio engine. Type <code class="cyber-code">help</code> to list available commands.
       </p>
     </div>
 
@@ -23,8 +23,8 @@ export function renderTerminalSection(): HTMLElement {
           <span class="term-dot dot-yellow"></span>
           <span class="term-dot dot-green"></span>
         </div>
-        <div class="terminal-title font-mono">guest@rajveer-sys: ~ (bash / v2.4.0)</div>
-        <div class="terminal-status font-mono text-cyber">READY [ONLINE]</div>
+        <div class="terminal-title font-mono">Terminal &mdash; guest@rajveer-sys &mdash; 80&times;24</div>
+        <div class="terminal-status font-mono text-cyber">Ready &bull; Online</div>
       </div>
 
       <div class="terminal-body" id="terminal-body">

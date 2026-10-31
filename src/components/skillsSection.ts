@@ -4,37 +4,37 @@ export function renderSkillsSection(): HTMLElement {
 
   const skillCategories = [
     {
-      category: 'BACKEND & APIS',
+      category: 'Backend & APIs',
       icon: '⚡',
       skills: ['Node.js', 'Express.js', 'REST APIs', 'JWT Auth', 'bcrypt', 'OAuth', 'Double-Entry Ledger', 'MVC Architecture'],
       level: 95
     },
     {
-      category: 'FRONTEND DEVELOPMENT',
+      category: 'Frontend Development',
       icon: '🖥️',
       skills: ['React.js', 'Tailwind CSS', 'React Router', 'HTML5 & CSS3', 'Axios', 'Bootstrap', 'EJS', 'Responsive UI'],
       level: 92
     },
     {
-      category: 'DATABASES & ORM',
+      category: 'Databases & ORM',
       icon: '🗄️',
       skills: ['MongoDB', 'Mongoose', 'MySQL', 'Prisma ORM', 'Schema Design', 'Data Aggregation'],
       level: 88
     },
     {
-      category: 'PROGRAMMING LANGUAGES',
+      category: 'Programming Languages',
       icon: '💻',
       skills: ['JavaScript (ES6+)', 'Java', 'Python', 'C', 'C++'],
       level: 90
     },
     {
-      category: 'TOOLS, CLOUD & DEVOPS',
+      category: 'Tools, Cloud & DevOps',
       icon: '☁️',
       skills: ['Git & GitHub', 'Postman', 'Render', 'AWS (Basics)', 'Cloudinary', 'Nodemon', 'dotenv'],
       level: 86
     },
     {
-      category: 'CS FUNDAMENTALS',
+      category: 'CS Fundamentals',
       icon: '🧠',
       skills: ['Data Structures & Algorithms', 'Object-Oriented Programming', 'Operating Systems', 'Computer Networks', 'Software Engineering'],
       level: 94
@@ -45,9 +45,9 @@ export function renderSkillsSection(): HTMLElement {
     <div class="section-header" data-aos="fade-up">
       <div class="section-tag">
         <span class="hud-badge-dot" aria-hidden="true"></span>
-        <span>// 03 // TECHNICAL ARSENAL</span>
+        <span>03 &bull; Technical Arsenal</span>
       </div>
-      <h2 class="section-title">SKILLS &amp; ARCHITECTURAL CAPABILITIES</h2>
+      <h2 class="section-title">Skills &amp; Capabilities</h2>
       <p class="section-subtitle">
         Battle-tested technologies employed across production full-stack systems, secure microservices, and AI pipelines.
       </p>

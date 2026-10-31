@@ -53,30 +53,30 @@ if (app) {
       <div class="hero-content">
         <div class="hud-badge mb-4" data-aos="fade-down">
           <span class="hud-badge-dot" aria-hidden="true"></span>
-          <span>SYSTEM INTERFACE V2.4 // SDE RECON</span>
+          <span>FULL-STACK (MERN) // SDE &bull; AI ARCHITECT</span>
         </div>
         
-        <h1 class="hero-title cyber-glitch" data-text="RAJ KUMAR VERMA" data-aos="fade-right">
-          RAJ KUMAR VERMA
+        <h1 class="hero-title cyber-glitch" data-text="Raj Kumar Verma" data-aos="fade-right">
+          Raj Kumar Verma
         </h1>
 
         <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">
-          <span class="text-cyber font-mono">&gt; FULL-STACK DEVELOPER (MERN) // AI SYSTEMS &amp; FINTECH ARCHITECT</span><br />
-          Building secure, scalable distributed applications with Groq AI integration, double-entry financial ledgers, and reactive 3D WebGL interfaces.
+          <span class="text-cyber font-mono">Full-Stack Developer &bull; AI Systems &bull; Fintech Architecture</span><br />
+          Crafting secure, scalable distributed applications with Groq AI pipelines, double-entry financial ledgers, and reactive 3D WebGL user experiences.
         </p>
 
         <div class="hero-actions" data-aos="fade-up" data-aos-delay="200">
           <a href="#projects" class="btn-cyber-primary" id="btn-hero-projects">
-            <span>EXPLORE PROJECTS</span>
+            <span>Explore Projects</span>
             <span aria-hidden="true">&rarr;</span>
           </a>
           <a href="#terminal" class="btn-cyber-secondary" id="btn-hero-terminal">
-            <span>OPEN CLI TERMINAL</span>
+            <span>Terminal CLI</span>
             <span aria-hidden="true">&gt;_</span>
           </a>
           <a href="#contact" class="btn-cyber-secondary" id="btn-hero-contact">
-            <span>INITIALIZE CONTACT</span>
-            <span aria-hidden="true">&gt;&gt;</span>
+            <span>Get in Touch</span>
+            <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
 
@@ -159,12 +159,12 @@ if (app) {
   footer.innerHTML = `
     <div class="container footer-inner font-mono">
       <div class="footer-left">
-        <span class="text-cyber">&copy; ${new Date().getFullYear()} RAJ KUMAR VERMA</span> &bull; 
-        <span>DESIGNED WITH THREE.JS &bull; WEBGL &bull; AOS</span>
+        <span>&copy; ${new Date().getFullYear()} Raj Kumar Verma</span> &bull; 
+        <span>Crafted with Three.js &bull; Liquid Glass &bull; Modern WebGL</span>
       </div>
       <div class="footer-right">
-        <span class="footer-telemetry">LATENCY: &lt;12ms // ALL SYSTEMS NOMINAL</span>
-        <a href="#hero" class="btn-back-to-top" id="btn-back-to-top" aria-label="Return to top of page">&uarr; TOP</a>
+        <span class="footer-telemetry">Systems Operational &bull; 60 FPS</span>
+        <a href="#hero" class="btn-back-to-top" id="btn-back-to-top" aria-label="Return to top of page">&uarr; Top</a>
       </div>
     </div>
   `;

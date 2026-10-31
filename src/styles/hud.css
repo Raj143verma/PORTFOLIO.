@@ -1,5 +1,6 @@
 /* ==========================================================================
-   HUD OVERLAYS, SCANLINES & TACTICAL ELEMENTS
+   APPLE LIQUID GLASS & INTERACTION MATERIALS
+   Grounded in Apple Human Interface Guidelines
    ========================================================================== */
 
 /* Fullscreen Background WebGL Canvas */
@@ -18,7 +19,7 @@
   display: block;
   width: 100%;
   height: 100%;
-  pointer-events: auto; /* Allow mouse interaction directly on canvas */
+  pointer-events: auto;
 }
 
 /* Base Body Setup */
@@ -32,96 +33,46 @@
   position: relative;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Subtle HUD Grid Overlay */
+/* Subtle Spatial Background Lighting */
 .hud-overlay {
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 1;
-  background-image: 
-    linear-gradient(to right, rgba(0, 240, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 240, 255, 0.02) 1px, transparent 1px);
-  background-size: 60px 60px;
 }
 
-/* CRT Scanline Effect (Ultra subtle) */
-.hud-scanline {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    rgba(18, 16, 16, 0) 50%, 
-    rgba(0, 0, 0, 0.15) 50%
-  );
-  background-size: 100% 4px;
-  opacity: 0.4;
-}
-
-/* Subtle Vignette */
+/* Vignette for Cinematic Focus */
 .hud-vignette {
   position: absolute;
   inset: 0;
   background: radial-gradient(
-    circle at center,
-    transparent 50%,
-    rgba(5, 8, 14, 0.8) 100%
+    circle at 50% 30%,
+    transparent 45%,
+    rgba(3, 6, 10, 0.75) 100%
   );
 }
 
-/* Tactical Corner Brackets */
-.hud-corner {
-  position: fixed;
-  width: 24px;
-  height: 24px;
-  border: 2px solid var(--neon-cyan);
-  opacity: 0.6;
-  pointer-events: none;
-  z-index: 100;
-}
-
-.hud-corner.top-left {
-  top: 12px;
-  left: 12px;
-  border-right: none;
-  border-bottom: none;
-}
-
-.hud-corner.top-right {
-  top: 12px;
-  right: 12px;
-  border-left: none;
-  border-bottom: none;
-}
-
-.hud-corner.bottom-left {
-  bottom: 12px;
-  left: 12px;
-  border-right: none;
-  border-top: none;
-}
-
-.hud-corner.bottom-right {
-  bottom: 12px;
-  right: 12px;
-  border-left: none;
-  border-top: none;
-}
-
-/* Tactical HUD Badge */
+/* Apple Capsule Badge */
 .hud-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 4px 12px;
+  padding: 6px 14px;
   font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  background: rgba(0, 240, 255, 0.08);
-  border: 1px solid var(--border-hud);
-  border-radius: 2px;
+  background: rgba(0, 229, 255, 0.08);
+  border: 1px solid rgba(0, 229, 255, 0.22);
+  border-radius: var(--radius-pill);
   color: var(--neon-cyan);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: var(--backdrop-blur);
+  -webkit-backdrop-filter: var(--backdrop-blur);
 }
 
 .hud-badge-dot {
@@ -130,87 +81,59 @@
   border-radius: 50%;
   background-color: var(--neon-emerald);
   box-shadow: 0 0 8px var(--neon-emerald);
-  animation: pulse-dot 2s infinite ease-in-out;
+  animation: pulse-dot 2.4s infinite ease-in-out;
 }
 
 @keyframes pulse-dot {
   0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.4; transform: scale(0.85); }
+  50% { opacity: 0.45; transform: scale(0.85); }
 }
 
-/* Glassmorphic Panel Cards */
+/* Liquid Glass Cards (Apple Squircle Architecture) */
 .cyber-card {
   background: var(--bg-card);
   backdrop-filter: var(--backdrop-blur);
   -webkit-backdrop-filter: var(--backdrop-blur);
   border: 1px solid var(--border-hud);
-  border-radius: 8px;
-  padding: 24px;
+  border-radius: var(--radius-lg);
+  padding: 28px;
   position: relative;
-  transition: all var(--transition-normal);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal), background var(--transition-normal);
+  box-shadow: var(--card-shadow);
 }
 
 .cyber-card:hover {
   background: var(--bg-card-hover);
-  border-color: var(--neon-cyan);
-  box-shadow: 0 12px 40px 0 rgba(0, 240, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 20px 48px -8px rgba(0, 0, 0, 0.6), inset 0 1px 0 0 rgba(255, 255, 255, 0.18);
   transform: translateY(-4px);
 }
 
-/* Glitch Typography Effect */
+/* Apple Keynote Metallic Title */
 .cyber-glitch {
-  position: relative;
-  display: inline-block;
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  background: linear-gradient(180deg, #FFFFFF 20%, rgba(255, 255, 255, 0.75) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  position: relative;
 }
 
-.cyber-glitch::before,
-.cyber-glitch::after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
-}
-
-.cyber-glitch::before {
-  left: -2px;
-  text-shadow: 2px 0 var(--neon-pink);
-  animation: glitch-anim-1 3s infinite linear alternate-reverse;
-}
-
-.cyber-glitch::after {
-  left: 2px;
-  text-shadow: -2px 0 var(--neon-cyan);
-  clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
-  animation: glitch-anim-2 2.5s infinite linear alternate-reverse;
-}
-
-@keyframes glitch-anim-1 {
-  0%, 90% { transform: translate(0); }
-  92% { transform: translate(-2px, 1px); }
-  94% { transform: translate(1px, -1px); }
-  96% { transform: translate(-1px, 2px); }
-  98% { transform: translate(2px, -1px); }
-  100% { transform: translate(0); }
-}
-
-@keyframes glitch-anim-2 {
-  0%, 88% { transform: translate(0); }
-  90% { transform: translate(2px, -1px); }
-  93% { transform: translate(-1px, 2px); }
-  97% { transform: translate(1px, 1px); }
-  100% { transform: translate(0); }
+/* Apple Code Token */
+.cyber-code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  padding: 2px 7px;
+  border-radius: var(--radius-xs);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--neon-cyan);
 }
 
 /* Reduced Motion Override */
 @media (prefers-reduced-motion: reduce) {
-  .cyber-glitch::before,
-  .cyber-glitch::after,
   .hud-badge-dot {
     animation: none !important;
   }

@@ -62,11 +62,11 @@ export function renderProjectsSection(): HTMLElement {
     <div class="section-header" data-aos="fade-up">
       <div class="section-tag">
         <span class="hud-badge-dot" aria-hidden="true"></span>
-        <span>// 04 // FEATURED PRODUCTION PROJECTS</span>
+        <span>04 &bull; Featured Projects</span>
       </div>
-      <h2 class="section-title">SHIPPED SOFTWARE SYSTEMS</h2>
+      <h2 class="section-title">Production Systems</h2>
       <p class="section-subtitle">
-        Production-grade full-stack applications with AI integration, financial ledgers, and geospatial systems.
+        Production-grade full-stack applications engineered with Groq AI pipelines, double-entry financial ledgers, and geospatial systems.
       </p>
     </div>
 
@@ -79,16 +79,16 @@ export function renderProjectsSection(): HTMLElement {
                  data-aos-delay="${idx * 150}" 
                  id="card-${proj.id}">
           <div class="project-header">
-            <span class="project-category font-mono" style="color: ${proj.accent};">// ${proj.category}</span>
+            <span class="project-category font-mono" style="color: ${proj.accent};">${proj.category}</span>
             <div class="project-status-dot" style="background-color: ${proj.accent}; box-shadow: 0 0 8px ${proj.accent};"></div>
           </div>
 
           <h3 class="project-title">${proj.title}</h3>
-          <p class="project-tagline font-mono text-cyber">&gt; ${proj.tagline}</p>
+          <p class="project-tagline font-mono text-cyber">${proj.tagline}</p>
           <p class="project-desc">${proj.description}</p>
 
           <div class="project-highlights">
-            <span class="highlights-heading font-mono">// ARCHITECTURE HIGHLIGHTS:</span>
+            <span class="highlights-heading font-mono">Architecture Highlights</span>
             <ul>
               ${proj.highlights.map((h) => `<li>${h}</li>`).join('')}
             </ul>
@@ -100,10 +100,10 @@ export function renderProjectsSection(): HTMLElement {
 
           <div class="project-actions">
             <a href="${proj.github}" target="_blank" rel="noopener noreferrer" class="btn-project-link btn-github" aria-label="View source code on GitHub">
-              <span>GITHUB REPO</span>
+              <span>View on GitHub</span>
               <span aria-hidden="true">&rarr;</span>
             </a>
-            <span class="project-badge-tag">PRODUCTION GRADE</span>
+            <span class="project-badge-tag">Production Ready</span>
           </div>
 
           <!-- 3D Specular Glare Overlay -->

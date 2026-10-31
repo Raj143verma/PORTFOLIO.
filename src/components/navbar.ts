@@ -10,23 +10,23 @@ export function renderNavbar(): HTMLElement {
   header.innerHTML = `
     <div class="container hud-nav-inner">
       <a href="#hero" class="hud-logo" aria-label="Raj Kumar Verma Home">
-        <span>[RAJVEER // DEV]</span>
-        <span class="hud-logo-tag">MERN &bull; SDE</span>
+        <span>Raj Kumar Verma</span>
+        <span class="hud-logo-tag">SDE &bull; MERN</span>
       </a>
 
-      <div class="hud-badge" title="Telemetry Status">
+      <div class="hud-badge" title="Status">
         <span class="hud-badge-dot" aria-hidden="true"></span>
-        <span>STATUS: OPEN TO WORK [ONLINE]</span>
+        <span>OPEN TO WORK [ONLINE]</span>
       </div>
 
       <nav aria-label="Main Navigation">
         <ul class="hud-links" id="hud-nav-links">
-          <li><a href="#hero" class="hud-link"><span class="hud-link-idx">// 01</span> HERO</a></li>
-          <li><a href="#about" class="hud-link"><span class="hud-link-idx">// 02</span> ABOUT</a></li>
-          <li><a href="#skills" class="hud-link"><span class="hud-link-idx">// 03</span> SKILLS</a></li>
-          <li><a href="#projects" class="hud-link"><span class="hud-link-idx">// 04</span> PROJECTS</a></li>
-          <li><a href="#experience" class="hud-link"><span class="hud-link-idx">// 05</span> EXPERIENCE</a></li>
-          <li><a href="#contact" class="hud-link"><span class="hud-link-idx">// 06</span> CONTACT</a></li>
+          <li><a href="#hero" class="hud-link"><span class="hud-link-idx">01</span> Hero</a></li>
+          <li><a href="#about" class="hud-link"><span class="hud-link-idx">02</span> About</a></li>
+          <li><a href="#skills" class="hud-link"><span class="hud-link-idx">03</span> Skills</a></li>
+          <li><a href="#projects" class="hud-link"><span class="hud-link-idx">04</span> Projects</a></li>
+          <li><a href="#experience" class="hud-link"><span class="hud-link-idx">05</span> Experience</a></li>
+          <li><a href="#contact" class="hud-link"><span class="hud-link-idx">06</span> Contact</a></li>
         </ul>
       </nav>
 
