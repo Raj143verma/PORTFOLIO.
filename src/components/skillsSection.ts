@@ -44,8 +44,7 @@ export function renderSkillsSection(): HTMLElement {
   section.innerHTML = `
     <div class="section-header" data-aos="fade-up">
       <div class="section-tag">
-        <span class="hud-badge-dot" aria-hidden="true"></span>
-        <span>03 &bull; Technical Arsenal</span>
+        <span>Technical Arsenal</span>
       </div>
       <h2 class="section-title">Skills &amp; Capabilities</h2>
       <p class="section-subtitle">

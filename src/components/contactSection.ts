@@ -7,8 +7,7 @@ export function renderContactSection(): HTMLElement {
   section.innerHTML = `
     <div class="section-header" data-aos="fade-up">
       <div class="section-tag">
-        <span class="hud-badge-dot" aria-hidden="true"></span>
-        <span>06 &bull; Get In Touch</span>
+        <span>Get in Touch</span>
       </div>
       <h2 class="section-title">Contact &amp; Connect</h2>
       <p class="section-subtitle">
@@ -63,15 +62,12 @@ export function renderContactSection(): HTMLElement {
           <div class="social-pills">
             <a href="https://github.com/rajvermause" target="_blank" rel="noopener noreferrer" class="social-pill" id="link-github">
               <span>GitHub</span>
-              <span aria-hidden="true">&nearr;</span>
             </a>
             <a href="https://linkedin.com/in/rajvermause" target="_blank" rel="noopener noreferrer" class="social-pill" id="link-linkedin">
               <span>LinkedIn</span>
-              <span aria-hidden="true">&nearr;</span>
             </a>
             <a href="mailto:rajvermause@gmail.com" class="social-pill">
               <span>Email Direct</span>
-              <span aria-hidden="true">&rarr;</span>
             </a>
           </div>
         </div>
@@ -105,7 +101,6 @@ export function renderContactSection(): HTMLElement {
 
           <button type="submit" class="btn-cyber-primary w-full" id="btn-submit-form">
             <span>Send Message</span>
-            <span aria-hidden="true">&rarr;</span>
           </button>
 
           <div id="form-success-banner" class="hud-success-banner font-mono" style="display: none;" role="status">

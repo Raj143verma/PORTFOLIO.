@@ -5,8 +5,7 @@ export function renderAboutSection(): HTMLElement {
   section.innerHTML = `
     <div class="section-header" data-aos="fade-up">
       <div class="section-tag">
-        <span class="hud-badge-dot" aria-hidden="true"></span>
-        <span>02 &bull; Identity &amp; Profile</span>
+        <span>Identity &amp; Background</span>
       </div>
       <h2 class="section-title">About Raj Kumar Verma</h2>
       <p class="section-subtitle">

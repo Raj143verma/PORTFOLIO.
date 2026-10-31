@@ -53,7 +53,7 @@ if (app) {
       <div class="hero-content">
         <div class="hud-badge mb-4" data-aos="fade-down">
           <span class="hud-badge-dot" aria-hidden="true"></span>
-          <span>FULL-STACK (MERN) // SDE &bull; AI ARCHITECT</span>
+          <span>Full-Stack Engineer / Distributed Systems</span>
         </div>
         
         <h1 class="hero-title cyber-glitch" data-text="Raj Kumar Verma" data-aos="fade-right">
@@ -61,22 +61,19 @@ if (app) {
         </h1>
 
         <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">
-          <span class="text-cyber font-mono">Full-Stack Developer &bull; AI Systems &bull; Fintech Architecture</span><br />
+          <span class="text-cyber font-mono">Full-Stack Developer, AI Systems &amp; Fintech Architecture</span><br />
           Crafting secure, scalable distributed applications with Groq AI pipelines, double-entry financial ledgers, and reactive 3D WebGL user experiences.
         </p>
 
         <div class="hero-actions" data-aos="fade-up" data-aos-delay="200">
           <a href="#projects" class="btn-cyber-primary" id="btn-hero-projects">
             <span>Explore Projects</span>
-            <span aria-hidden="true">&rarr;</span>
           </a>
           <a href="#terminal" class="btn-cyber-secondary" id="btn-hero-terminal">
             <span>Terminal CLI</span>
-            <span aria-hidden="true">&gt;_</span>
           </a>
           <a href="#contact" class="btn-cyber-secondary" id="btn-hero-contact">
             <span>Get in Touch</span>
-            <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
 
@@ -84,17 +81,17 @@ if (app) {
         <div class="hero-telemetry-strip" data-aos="fade-up" data-aos-delay="300">
           <div class="telemetry-stat">
             <span class="stat-value font-mono text-cyber">3+</span>
-            <span class="stat-label">PRODUCTION APPS</span>
+            <span class="stat-label">Production apps</span>
           </div>
           <div class="telemetry-divider" aria-hidden="true">/</div>
           <div class="telemetry-stat">
             <span class="stat-value font-mono text-cyber">15+</span>
-            <span class="stat-label">RBAC API ROUTES</span>
+            <span class="stat-label">RBAC API routes</span>
           </div>
           <div class="telemetry-divider" aria-hidden="true">/</div>
           <div class="telemetry-stat">
             <span class="stat-value font-mono text-cyber">B.E. CSE</span>
-            <span class="stat-label">BURDWAN UNIV ('27)</span>
+            <span class="stat-label">Burdwan Univ ('27)</span>
           </div>
         </div>
       </div>
@@ -159,12 +156,12 @@ if (app) {
   footer.innerHTML = `
     <div class="container footer-inner font-mono">
       <div class="footer-left">
-        <span>&copy; ${new Date().getFullYear()} Raj Kumar Verma</span> &bull; 
-        <span>Crafted with Three.js &bull; Liquid Glass &bull; Modern WebGL</span>
+        <span>&copy; ${new Date().getFullYear()} Raj Kumar Verma</span>
+        <span class="footer-subtext">Crafted with Three.js, TypeScript and WebGL</span>
       </div>
       <div class="footer-right">
-        <span class="footer-telemetry">Systems Operational &bull; 60 FPS</span>
-        <a href="#hero" class="btn-back-to-top" id="btn-back-to-top" aria-label="Return to top of page">&uarr; Top</a>
+        <span class="footer-telemetry">Active 60 FPS WebGL</span>
+        <a href="#hero" class="btn-back-to-top" id="btn-back-to-top" aria-label="Return to top of page">Top</a>
       </div>
     </div>
   `;

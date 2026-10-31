@@ -5,8 +5,7 @@ export function renderExperienceSection(): HTMLElement {
   section.innerHTML = `
     <div class="section-header" data-aos="fade-up">
       <div class="section-tag">
-        <span class="hud-badge-dot" aria-hidden="true"></span>
-        <span>05 &bull; Experience &amp; Education</span>
+        <span>Career &amp; Education</span>
       </div>
       <h2 class="section-title">Career &amp; Education</h2>
       <p class="section-subtitle">
@@ -66,7 +65,7 @@ export function renderExperienceSection(): HTMLElement {
         <div class="cyber-card timeline-card">
           <div class="timeline-card-header">
             <div>
-              <span class="timeline-role text-cyber font-mono">Bachelor of Engineering (B.E.) &bull; CSE</span>
+              <span class="timeline-role text-cyber font-mono">Bachelor of Engineering (B.E.), Computer Science</span>
               <h3 class="timeline-company">University Institute of Technology, Burdwan University</h3>
             </div>
             <span class="timeline-date font-mono">Expected: Aug 2027</span>

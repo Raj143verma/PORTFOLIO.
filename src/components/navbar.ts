@@ -11,31 +11,30 @@ export function renderNavbar(): HTMLElement {
     <div class="container hud-nav-inner">
       <a href="#hero" class="hud-logo" aria-label="Raj Kumar Verma Home">
         <span>Raj Kumar Verma</span>
-        <span class="hud-logo-tag">SDE &bull; MERN</span>
+        <span class="hud-logo-tag">Full-Stack / SDE</span>
       </a>
-
-      <div class="hud-badge" title="Status">
-        <span class="hud-badge-dot" aria-hidden="true"></span>
-        <span>OPEN TO WORK [ONLINE]</span>
-      </div>
 
       <nav aria-label="Main Navigation">
         <ul class="hud-links" id="hud-nav-links">
-          <li><a href="#hero" class="hud-link"><span class="hud-link-idx">01</span> Hero</a></li>
-          <li><a href="#about" class="hud-link"><span class="hud-link-idx">02</span> About</a></li>
-          <li><a href="#skills" class="hud-link"><span class="hud-link-idx">03</span> Skills</a></li>
-          <li><a href="#projects" class="hud-link"><span class="hud-link-idx">04</span> Projects</a></li>
-          <li><a href="#experience" class="hud-link"><span class="hud-link-idx">05</span> Experience</a></li>
-          <li><a href="#contact" class="hud-link"><span class="hud-link-idx">06</span> Contact</a></li>
+          <li><a href="#about" class="hud-link" data-section="about">About</a></li>
+          <li><a href="#skills" class="hud-link" data-section="skills">Skills</a></li>
+          <li><a href="#projects" class="hud-link" data-section="projects">Projects</a></li>
+          <li><a href="#experience" class="hud-link" data-section="experience">Experience</a></li>
+          <li><a href="#terminal" class="hud-link" data-section="terminal">Terminal</a></li>
+          <li><a href="#contact" class="hud-link" data-section="contact">Contact</a></li>
         </ul>
       </nav>
 
       <div class="hud-nav-actions">
         <button id="sound-toggle" class="sound-toggle-btn ${isMuted ? 'muted' : ''}" 
-                aria-label="Toggle Futuristic Audio Effects" 
-                title="${isMuted ? 'Unmute Sci-Fi SFX' : 'Mute Sci-Fi SFX'}">
+                aria-label="Toggle Sound Effects" 
+                title="${isMuted ? 'Unmute Audio' : 'Mute Audio'}">
           <span id="sound-icon" aria-hidden="true">${isMuted ? '🔇' : '🔊'}</span>
         </button>
+
+        <a href="#contact" class="btn-cyber-primary btn-nav-cta">
+          <span>Get in Touch</span>
+        </a>
 
         <button id="mobile-nav-toggle" class="hud-mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
           <span></span>
@@ -53,7 +52,7 @@ export function renderNavbar(): HTMLElement {
     soundBtn.addEventListener('click', () => {
       const muted = sound.toggleMute();
       soundBtn.classList.toggle('muted', muted);
-      soundBtn.title = muted ? 'Unmute Sci-Fi SFX' : 'Mute Sci-Fi SFX';
+      soundBtn.title = muted ? 'Unmute Audio' : 'Mute Audio';
       soundIcon.textContent = muted ? '🔇' : '🔊';
     });
   }
@@ -69,8 +68,9 @@ export function renderNavbar(): HTMLElement {
     });
   }
 
-  // Hover sounds on links
-  header.querySelectorAll('.hud-link').forEach((link) => {
+  // Hover sounds and active link handling
+  const links = header.querySelectorAll<HTMLAnchorElement>('.hud-link');
+  links.forEach((link) => {
     link.addEventListener('mouseenter', () => sound.playHover());
     link.addEventListener('click', () => {
       sound.playClick();
@@ -80,6 +80,37 @@ export function renderNavbar(): HTMLElement {
       }
     });
   });
+
+  // Scroll spy to highlight active section
+  const sectionIds = ['about', 'skills', 'projects', 'experience', 'terminal', 'contact'];
+  const observerOptions: IntersectionObserverInit = {
+    root: null,
+    rootMargin: '-20% 0px -60% 0px',
+    threshold: 0
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        links.forEach((link) => {
+          if (link.getAttribute('data-section') === id) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+      }
+    });
+  }, observerOptions);
+
+  // Defer observing until DOM elements are mounted
+  window.setTimeout(() => {
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+  }, 200);
 
   return header;
 }

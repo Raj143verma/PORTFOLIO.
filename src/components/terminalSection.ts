@@ -24,7 +24,7 @@ export function renderTerminalSection(): HTMLElement {
           <span class="term-dot dot-green"></span>
         </div>
         <div class="terminal-title font-mono">Terminal &mdash; guest@rajveer-sys &mdash; 80&times;24</div>
-        <div class="terminal-status font-mono text-cyber">Ready &bull; Online</div>
+        <div class="terminal-status font-mono text-cyber">Ready / Online</div>
       </div>
 
       <div class="terminal-body" id="terminal-body">
@@ -93,7 +93,7 @@ export function renderTerminalSection(): HTMLElement {
             responseLine.innerHTML = `
               <p><strong>RAJ KUMAR VERMA</strong> &mdash; Full-Stack (MERN) Developer &amp; SDE</p>
               <p>Specializing in secure multi-tier architectures, Groq AI integrations, and double-entry ledger financial systems.</p>
-              <p>Location: Giridih, Jharkhand, India &bull; University: UIT, Burdwan University (B.E. CSE '27)</p>
+              <p>Location: Giridih, Jharkhand, India | University: UIT, Burdwan University (B.E. CSE '27)</p>
             `;
             break;
 
@@ -122,8 +122,8 @@ export function renderTerminalSection(): HTMLElement {
             sound.playConfirm();
             responseLine.innerHTML = `
               <p><span class="text-cyber">Full-Stack Development Intern</span> @ Vaidsys Technologies (Apr 2026 - May 2026)</p>
-              <p>&bull; 15+ RBAC routes for 50+ concurrent users managing 1,000+ content assets.</p>
-              <p>&bull; Reduced publication time from 30 minutes to &lt;2 minutes (93% reduction).</p>
+              <p>- 15+ RBAC routes for 50+ concurrent users managing 1,000+ content assets.</p>
+              <p>- Reduced publication time from 30 minutes to &lt;2 minutes (93% reduction).</p>
             `;
             break;
 
@@ -133,7 +133,7 @@ export function renderTerminalSection(): HTMLElement {
               <p>Email: <a href="mailto:rajvermause@gmail.com" class="text-cyber">rajvermause@gmail.com</a></p>
               <p>Phone: <span class="text-cyber">+91 7970908458</span></p>
               <p>Location: Giridih, Jharkhand, India</p>
-              <p>GitHub: <a href="https://github.com" target="_blank" rel="noopener" class="text-cyber">github.com</a> &bull; LinkedIn: <a href="https://linkedin.com" target="_blank" rel="noopener" class="text-cyber">linkedin.com</a></p>
+              <p>GitHub: <a href="https://github.com" target="_blank" rel="noopener" class="text-cyber">github.com</a> | LinkedIn: <a href="https://linkedin.com" target="_blank" rel="noopener" class="text-cyber">linkedin.com</a></p>
             `;
             break;
 

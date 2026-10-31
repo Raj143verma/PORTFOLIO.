@@ -1,74 +1,129 @@
+/* Hallmark: atmospheric | Raj Kumar Verma 3D Portfolio */
 /* ==========================================================================
-   APPLE DESIGN SYSTEM & LIQUID GLASS TOKENS
-   Visual Language: Apple Human Interface Guidelines / Spatial Glass / Pro Tech
+   DESIGN TOKENS & SYSTEM VARIABLES
+   Hallmark Atmospheric Theme
    ========================================================================== */
 
 :root {
   /* Spatial & Obsidian Canvas */
   --bg-void: #03060a;
   --bg-surface: #0a0f18;
-  --bg-card: rgba(15, 22, 35, 0.65);
-  --bg-card-hover: rgba(22, 32, 50, 0.82);
-  --bg-glass-hud: rgba(10, 15, 24, 0.72);
+  --bg-card: rgba(14, 20, 32, 0.7);
+  --bg-card-hover: rgba(20, 30, 48, 0.85);
+  --bg-glass-nav: rgba(10, 15, 24, 0.82);
+  --bg-glass-pill: rgba(240, 244, 248, 0.08);
+  --bg-glass-pill-hover: rgba(240, 244, 248, 0.14);
+  --bg-glass-pill-active: rgba(240, 244, 248, 0.18);
+  --bg-input: rgba(3, 6, 10, 0.5);
+  --bg-dark-plate: rgba(3, 6, 10, 0.4);
+  --bg-telemetry: rgba(240, 244, 248, 0.05);
+  --bg-highlight-box: rgba(3, 6, 10, 0.35);
+  --bg-channel-item: rgba(3, 6, 10, 0.3);
+  --bg-terminal: rgba(10, 14, 22, 0.92);
+  --bg-terminal-bar: rgba(20, 28, 44, 0.8);
+  --bg-toast: rgba(16, 22, 34, 0.94);
+  --bg-banner-success: rgba(48, 209, 88, 0.12);
+  --bg-badge-success: rgba(48, 209, 88, 0.14);
+  --bg-mobile-menu: rgba(10, 15, 25, 0.96);
 
-  /* Apple System & Spectral Palette */
-  --apple-blue: #0a84ff;
-  --neon-cyan: #00e5ff;
-  --neon-cyan-glow: rgba(0, 229, 255, 0.35);
-  --neon-cyan-subtle: rgba(0, 229, 255, 0.1);
+  /* Spectral & Anchor Colors */
+  --color-blue: #0a84ff;
+  --color-blue-dark: #0066d6;
+  --color-blue-hover: #2691ff;
+  --color-cyan: #00e5ff;
+  --color-cyan-tint: rgba(0, 229, 255, 0.12);
+  --color-emerald: #30d158;
+  --color-emerald-tint: rgba(48, 209, 88, 0.14);
+  --color-pink: #ff375f;
+  --color-pink-tint: rgba(255, 55, 95, 0.15);
 
-  --neon-blue: #0a84ff;
-  --neon-blue-glow: rgba(10, 132, 255, 0.35);
+  /* Terminal Window Controls */
+  --color-term-red: #ff5f56;
+  --color-term-yellow: #ffbd2e;
+  --color-term-green: #27c93f;
 
-  --neon-emerald: #30d158;
-  --neon-emerald-glow: rgba(48, 209, 88, 0.35);
+  /* Tinted Typography (Tinted toward cool anchor, never pure #fff) */
+  --text-primary: #f2f5f9;
+  --text-secondary: rgba(235, 240, 248, 0.72);
+  --text-muted: rgba(235, 240, 248, 0.46);
+  --text-accent: #00e5ff;
+  --text-inverse: #03060a;
 
-  --neon-pink: #ff375f;
-  --neon-pink-glow: rgba(255, 55, 95, 0.35);
+  /* Structural Glass Borders & Separators */
+  --border-nav: rgba(240, 244, 248, 0.12);
+  --border-card: rgba(240, 244, 248, 0.1);
+  --border-card-hover: rgba(240, 244, 248, 0.22);
+  --border-pill: rgba(240, 244, 248, 0.12);
+  --border-pill-hover: rgba(240, 244, 248, 0.25);
+  --border-separator: rgba(240, 244, 248, 0.08);
+  --border-cyan-glow: rgba(0, 229, 255, 0.3);
+  --border-cyan-subtle: rgba(0, 229, 255, 0.22);
+  --border-emerald: rgba(48, 209, 88, 0.3);
+  --border-input-focus: #0a84ff;
+  --border-input-error: #ff375f;
+  --border-terminal-line: rgba(0, 229, 255, 0.4);
 
-  --neon-amber: #ffd60a;
+  /* Gradients */
+  --gradient-btn-primary: linear-gradient(180deg, #0a84ff 0%, #0070e0 100%);
+  --gradient-btn-primary-hover: linear-gradient(180deg, #2691ff 0%, #0a84ff 100%);
+  --gradient-headline: linear-gradient(180deg, #f2f5f9 20%, rgba(235, 240, 248, 0.75) 100%);
+  --gradient-metric: linear-gradient(180deg, #f2f5f9 30%, rgba(235, 240, 248, 0.7) 100%);
+  --gradient-timeline-line: linear-gradient(to bottom, #0a84ff, rgba(10, 132, 255, 0.1));
+  --gradient-progress-bar: linear-gradient(90deg, #0a84ff, #00e5ff);
+  --gradient-vignette: radial-gradient(circle at 50% 30%, transparent 45%, rgba(3, 6, 10, 0.75) 100%);
 
-  /* Apple HIG Typography Hierarchy */
-  --text-primary: #ffffff;
-  --text-secondary: rgba(235, 235, 245, 0.72);
-  --text-muted: rgba(235, 235, 245, 0.44);
-  --text-cyber: #00e5ff;
+  /* Shadows */
+  --shadow-nav: 0 16px 36px -8px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(240, 244, 248, 0.12);
+  --shadow-card: 0 12px 32px -4px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(240, 244, 248, 0.08);
+  --shadow-card-hover: 0 20px 48px -8px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(240, 244, 248, 0.18);
+  --shadow-btn: 0 4px 18px rgba(10, 132, 255, 0.35), inset 0 1px 0 rgba(240, 244, 248, 0.25);
+  --shadow-btn-hover: 0 6px 24px rgba(10, 132, 255, 0.5), inset 0 1px 0 rgba(240, 244, 248, 0.35);
+  --shadow-secondary-btn: 0 4px 16px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(240, 244, 248, 0.1);
+  --shadow-secondary-btn-hover: 0 6px 20px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(240, 244, 248, 0.18);
+  --shadow-toast: 0 16px 40px rgba(0, 0, 0, 0.6);
+  --shadow-input-focus: 0 0 12px rgba(10, 132, 255, 0.3);
+  --shadow-input-error: 0 0 12px rgba(255, 55, 95, 0.3);
+  --shadow-glow-cyan: 0 0 12px rgba(0, 229, 255, 0.35);
+  --shadow-timeline-dot: 0 0 12px rgba(10, 132, 255, 0.6);
+  --shadow-badge: 0 2px 8px rgba(0, 0, 0, 0.2);
+  --shadow-telemetry: 0 8px 24px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(240, 244, 248, 0.1);
+  --shadow-progress: 0 0 10px rgba(0, 229, 255, 0.4);
 
-  /* Structural Apple Glass Borders & Separators */
-  --border-hud: rgba(255, 255, 255, 0.12);
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-active: #00e5ff;
-  --separator: rgba(255, 255, 255, 0.1);
-
-  /* Apple Corner Radii (Continuous Squircles) */
+  /* Corner Radii */
   --radius-xs: 6px;
   --radius-sm: 10px;
   --radius-md: 14px;
-  --radius-lg: 22px;
+  --radius-lg: 20px;
   --radius-pill: 9999px;
 
-  /* Font Families - Apple Native System First */
-  --font-display: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Space Grotesk', system-ui, sans-serif;
-  --font-body: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'DM Sans', system-ui, sans-serif;
-  --font-mono: 'SF Mono', 'JetBrains Mono', Menlo, Consolas, monospace;
+  /* Font Stacks */
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+  --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace;
 
-  /* Spring-like Micro-Interactions */
+  /* Transitions (explicit, smooth timing functions) */
   --transition-fast: 160ms cubic-bezier(0.25, 1, 0.5, 1);
-  --transition-normal: 280ms cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-smooth: 450ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 260ms cubic-bezier(0.16, 1, 0.3, 1);
 
-  /* Apple Liquid Glass Blur & Inset Lighting */
+  /* Materials */
   --backdrop-blur: blur(24px) saturate(190%);
-  --glass-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.6), inset 0 1px 0 0 rgba(255, 255, 255, 0.14);
-  --card-shadow: 0 12px 32px -4px rgba(0, 0, 0, 0.45), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
-  --glow-cyan-sm: 0 0 12px rgba(0, 229, 255, 0.25);
-  --glow-cyan-lg: 0 0 28px rgba(0, 229, 255, 0.35);
+
+  /* Legacy Aliases for seamless integration */
+  --neon-cyan: var(--color-cyan);
+  --neon-emerald: var(--color-emerald);
+  --neon-pink: var(--color-pink);
+  --apple-blue: var(--color-blue);
+  --border-hud: var(--border-card);
+  --border-subtle: var(--border-separator);
+  --separator: var(--border-separator);
+  --bg-glass-hud: var(--bg-glass-nav);
+  --glass-shadow: var(--shadow-nav);
+  --card-shadow: var(--shadow-card);
 }
 
 @media (prefers-reduced-motion: reduce) {
   :root {
     --transition-fast: 0ms;
     --transition-normal: 0ms;
-    --transition-smooth: 0ms;
   }
 }
