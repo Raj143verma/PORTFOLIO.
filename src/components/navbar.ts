@@ -5,8 +5,6 @@ export function renderNavbar(): HTMLElement {
   header.className = 'hud-navbar';
   header.setAttribute('role', 'banner');
 
-  const isMuted = sound.getMuted();
-
   header.innerHTML = `
     <div class="container hud-nav-inner">
       <a href="#hero" class="hud-logo" aria-label="Raj Kumar Verma">
@@ -26,12 +24,6 @@ export function renderNavbar(): HTMLElement {
       </nav>
 
       <div class="hud-nav-actions">
-        <button id="sound-toggle" class="sound-toggle-btn ${isMuted ? 'muted' : ''}" 
-                aria-label="Toggle Sound Effects" 
-                title="${isMuted ? 'Unmute Audio' : 'Mute Audio'}">
-          <span id="sound-icon" aria-hidden="true">${isMuted ? '🔇' : '🔊'}</span>
-        </button>
-
         <a href="/Raj_Kumar_Verma_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-cyber-primary btn-nav-cta" aria-label="Open Resume in new tab">
           <span>Resume</span>
         </a>
@@ -44,18 +36,6 @@ export function renderNavbar(): HTMLElement {
       </div>
     </div>
   `;
-
-  // Attach interactive events
-  const soundBtn = header.querySelector<HTMLButtonElement>('#sound-toggle');
-  const soundIcon = header.querySelector<HTMLSpanElement>('#sound-icon');
-  if (soundBtn && soundIcon) {
-    soundBtn.addEventListener('click', () => {
-      const muted = sound.toggleMute();
-      soundBtn.classList.toggle('muted', muted);
-      soundBtn.title = muted ? 'Unmute Audio' : 'Mute Audio';
-      soundIcon.textContent = muted ? '🔇' : '🔊';
-    });
-  }
 
   // Mobile menu toggle
   const mobileToggle = header.querySelector<HTMLButtonElement>('#mobile-nav-toggle');
