@@ -39,9 +39,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### 5. Performance, Accessibility & Verification
 
-- [ ] **QUAL-01**: Text contrast meets WCAG AA 4.5:1 ratio across all text and buttons against the dark theme.
-- [ ] **QUAL-02**: Keyboard accessibility: complete navigation operable via `Tab`, visible neon focus rings on all interactive elements.
-- [ ] **QUAL-03**: Production build passes with zero errors, optimized asset bundling, and clean TypeScript compilation.
+- [x] **QUAL-01**: Text contrast meets WCAG AA 4.5:1 ratio across all text and buttons against the dark theme.
+- [x] **QUAL-02**: Keyboard accessibility: complete navigation operable via `Tab`, visible neon focus rings on all interactive elements.
+- [x] **QUAL-03**: Production build passes with zero errors, optimized asset bundling, and clean TypeScript compilation.
 
 ## Out of Scope
 
