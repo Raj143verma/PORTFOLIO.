@@ -1,6 +1,14 @@
 import './styles/main.css';
 import { renderNavbar } from './components/navbar';
 import { sound } from './audio/soundManager';
+import { SceneManager } from './three/sceneManager';
+
+// Initialize Three.js WebGL 3D Background Engine
+try {
+  new SceneManager('webgl-container');
+} catch (err) {
+  console.warn('WebGL initialization skipped or failed:', err);
+}
 
 const app = document.getElementById('app');
 

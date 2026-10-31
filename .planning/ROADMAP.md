@@ -7,7 +7,7 @@ This roadmap lays out the development trajectory from empty directory to a fully
 ## Phases
 
 - [x] **Phase 1: Foundation, Build System & Sci-Fi HUD Design System** - Setup Vite + TypeScript, responsive HTML layout shell, Cyber-HUD CSS design token architecture, and navigation HUD. (completed 2026-10-31)
-- [ ] **Phase 2: Three.js WebGL 3D Canvas & Interactive Holographic Core** - Implement WebGL canvas, 3D holographic quantum core, reactive particle constellation, cursor parallax, and scroll-linked scene transformations.
+- [x] **Phase 2: Three.js WebGL 3D Canvas & Interactive Holographic Core** - Implement WebGL canvas, 3D holographic quantum core, reactive particle constellation, cursor parallax, and scroll-linked scene transformations. (completed 2026-10-31)
 - [ ] **Phase 3: Portfolio Content, Interactive Sections & Scroll Reveal** - Integrate AOS animations, Hero glitch typography, Cyberpunk Terminal simulator, 3D tilted project cards, skills telemetry matrix, and contact HUD.
 - [ ] **Phase 4: Polish, Accessibility, WebGL Optimization & Shipped Verification** - Verification gate: Lighthouse performance audit, WCAG AA 4.5:1 contrast, `prefers-reduced-motion` compliance, production build verification, and deployment artifact readiness.
 
@@ -49,8 +49,8 @@ Plans:
 
 Plans:
 
-- [ ] 02-01: Construct Three.js WebGL manager with scene graph, camera controller, responsive resize handler, `pixelRatio` clamping, and render-loop lifecycle guards.
-- [ ] 02-02: Create Holographic Quantum Core mesh, interactive particle constellation, cursor raycasting/parallax controller, and scroll-linked camera animator.
+- [x] 02-01: Construct Three.js WebGL manager with scene graph, camera controller, responsive resize handler, `pixelRatio` clamping, and render-loop lifecycle guards.
+- [x] 02-02: Create Holographic Quantum Core mesh, interactive particle constellation, cursor raycasting/parallax controller, and scroll-linked camera animator.
 
 ### Phase 3: Portfolio Content, Interactive Sections & Scroll Reveal
 

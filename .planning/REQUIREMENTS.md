@@ -16,11 +16,11 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### 2. Three.js 3D WebGL Canvas
 
-- [ ] **THRE-01**: Fullscreen background WebGL canvas responsive to viewport resize with `pixelRatio` clamped to `Math.min(devicePixelRatio, 2)`.
-- [ ] **THRE-02**: Holographic 3D Central Core (e.g. geometric wireframe icosahedron / quantum reactor with pulsing emissive glow) positioned in Hero section.
-- [ ] **THRE-03**: Interactive particle field / cyber constellation responding to mouse/cursor movement with smooth dampening/inertia.
-- [ ] **THRE-04**: Scroll-driven camera and object transformation: 3D scene rotates and transitions as user scrolls through sections.
-- [ ] **THRE-05**: Performance guard: WebGL render loop automatically pauses when tab is in background (`document.hidden` / `visibilitychange`) or if device requests reduced motion.
+- [x] **THRE-01**: Fullscreen background WebGL canvas responsive to viewport resize with `pixelRatio` clamped to `Math.min(devicePixelRatio, 2)`.
+- [x] **THRE-02**: Holographic 3D Central Core (e.g. geometric wireframe icosahedron / quantum reactor with pulsing emissive glow) positioned in Hero section.
+- [x] **THRE-03**: Interactive particle field / cyber constellation responding to mouse/cursor movement with smooth dampening/inertia.
+- [x] **THRE-04**: Scroll-driven camera and object transformation: 3D scene rotates and transitions as user scrolls through sections.
+- [x] **THRE-05**: Performance guard: WebGL render loop automatically pauses when tab is in background (`document.hidden` / `visibilitychange`) or if device requests reduced motion.
 
 ### 3. Scroll Reveal & Content Presentation
 
