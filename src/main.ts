@@ -63,8 +63,9 @@ if (app) {
           </h1>
 
           <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">
-            <span class="text-cyber font-mono">Full-Stack Developer, AI Systems &amp; Fintech Architecture</span><br />
-            Crafting secure, scalable distributed applications with Groq AI pipelines, double-entry financial ledgers, and reactive 3D WebGL user experiences.
+            Full-Stack Engineer specializing in high-performance web applications, 
+            <span class="text-cyber font-mono">Groq AI pipelines</span>, and secure 
+            <span class="text-cyber font-mono">fintech architectures</span>.
           </p>
 
           <div class="hero-actions" data-aos="fade-up" data-aos-delay="200">

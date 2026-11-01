@@ -9,7 +9,7 @@ export function renderAboutSection(): HTMLElement {
       </div>
       <h2 class="section-title">About Raj Kumar Verma</h2>
       <p class="section-subtitle">
-        Full-Stack (MERN) Engineer architecting secure, scalable systems with Groq AI integration and fintech-grade transactional integrity.
+        Full-Stack (MERN) Engineer architecting secure systems with Groq AI integration and fintech-grade transactional integrity.
       </p>
     </div>
 
@@ -18,7 +18,7 @@ export function renderAboutSection(): HTMLElement {
       <div class="cyber-card about-card" data-aos="fade-right" data-aos-delay="100">
         <div class="about-card-top">
           <div class="about-photo-wrapper">
-            <img src="/raj_verma.jpg" alt="Raj Kumar Verma" class="about-photo" width="110" height="110" loading="lazy" />
+            <img src="/raj_verma.jpg" alt="Raj Kumar Verma" class="about-photo" width="100" height="100" loading="lazy" />
           </div>
           <div class="about-identity-meta">
             <div class="card-header-bar">
@@ -32,23 +32,24 @@ export function renderAboutSection(): HTMLElement {
         </div>
 
         <p class="about-text">
-          I am a <strong>Full-Stack Developer</strong> and Computer Science Engineer specializing in the <strong>MERN stack</strong> and modern AI pipeline integration. My engineering journey centers on building reliable web applications with production-grade security, from <strong>JWT &amp; RBAC authentication architectures</strong> to <strong>double-entry financial ledgers</strong> ensuring strict atomic transaction consistency.
+          I am a Computer Science Engineer specializing in the MERN stack and modern AI integration. I focus on engineering robust web applications with production-grade security, from JWT and RBAC authorization architectures to double-entry financial ledgers guaranteeing atomic transaction consistency.
         </p>
         <p class="about-text">
-          During my internship at <strong>Vaidsys Technologies</strong>, I engineered role-based access control protecting 15+ sensitive routes for 50+ concurrent users, slashed publication pipelines from 30 minutes to under 2 minutes, and designed an analytics engine boosting content discoverability by 40%.
+          During my internship at <strong>Vaidsys Technologies</strong>, I built RBAC middleware safeguarding 15+ routes for 50+ concurrent users, accelerated publishing pipelines by 93% (30m &rarr; &lt;2m), and created analytics filters enhancing content discoverability.
         </p>
+
         <div class="about-meta-row">
           <div class="meta-item">
             <span class="meta-label">Degree</span>
-            <span class="meta-val">B.E. Computer Science &amp; Engg</span>
+            <span class="meta-val">B.E. Computer Science</span>
           </div>
           <div class="meta-item">
             <span class="meta-label">Institution</span>
-            <span class="meta-val">Burdwan University (2027)</span>
+            <span class="meta-val">Burdwan University ('27)</span>
           </div>
           <div class="meta-item">
             <span class="meta-label">Location</span>
-            <span class="meta-val">Giridih, Jharkhand, India</span>
+            <span class="meta-val">Jharkhand, India</span>
           </div>
         </div>
       </div>
@@ -58,25 +59,25 @@ export function renderAboutSection(): HTMLElement {
         <div class="cyber-card metric-card">
           <div class="metric-num text-cyber">3+</div>
           <div class="metric-title">Production Apps Shipped</div>
-          <p class="metric-desc">Full-stack AI, fintech, and real estate applications with complete test coverage.</p>
+          <p class="metric-desc">Full-stack AI, fintech, and real estate applications with robust testing.</p>
         </div>
 
         <div class="cyber-card metric-card">
           <div class="metric-num text-cyber">15+</div>
           <div class="metric-title">Protected RBAC Routes</div>
-          <p class="metric-desc">Engineered multi-tier authorization and JWT middleware for concurrent enterprise workloads.</p>
+          <p class="metric-desc">Multi-tier authorization and JWT middleware for concurrent workloads.</p>
         </div>
 
         <div class="cyber-card metric-card">
           <div class="metric-num text-cyber">93%</div>
           <div class="metric-title">Pipeline Acceleration</div>
-          <p class="metric-desc">Cut draft-to-publish workflows from 30 minutes to &lt;2 minutes at Vaidsys Technologies.</p>
+          <p class="metric-desc">Cut draft-to-publish workflows from 30m to &lt;2m at Vaidsys Technologies.</p>
         </div>
 
         <div class="cyber-card metric-card">
           <div class="metric-num text-cyber">100%</div>
           <div class="metric-title">Ledger Integrity</div>
-          <p class="metric-desc">Double-entry accounting systems with atomic database commits and comprehensive audit trails.</p>
+          <p class="metric-desc">Double-entry accounting with atomic commits and zero balance drift.</p>
         </div>
       </div>
     </div>

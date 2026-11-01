@@ -9,7 +9,7 @@ export function renderExperienceSection(): HTMLElement {
       </div>
       <h2 class="section-title">Career &amp; Education</h2>
       <p class="section-subtitle">
-        Hands-on engineering roles, production impact metrics, and computer science foundations.
+        Engineering roles, production impact metrics, and academic computer science foundation.
       </p>
     </div>
 
@@ -32,16 +32,13 @@ export function renderExperienceSection(): HTMLElement {
 
           <ul class="timeline-bullets">
             <li>
-              <strong>Role-Based Access Control (RBAC):</strong> Architected security middleware for 15+ protected routes, empowering 50+ concurrent users to safely publish and manage 1,000+ content pieces.
+              <strong>Role-Based Access Control:</strong> Architected security middleware for 15+ protected routes, empowering 50+ concurrent users to safely manage 1,000+ assets.
             </li>
             <li>
-              <strong>Draft-to-Publish Workflow:</strong> Engineered an automated release pipeline that collapsed content publishing cycles from 30 minutes down to under 2 minutes (93% reduction).
+              <strong>Pipeline Acceleration (93%):</strong> Collapsed draft-to-publish deployment cycles from 30 minutes down to under 2 minutes with automated validation.
             </li>
             <li>
-              <strong>Rich Text Media Editor:</strong> Designed dynamic WYSIWYG editor featuring direct media uploads, automated processing, and publishing scheduling.
-            </li>
-            <li>
-              <strong>Operational Analytics Dashboard:</strong> Built high-speed search and multi-facet filtering engine, enhancing administrative content discoverability by 40%.
+              <strong>Operational Analytics:</strong> Built high-speed search and multi-facet filtering engine, enhancing administrative content discoverability by 40%.
             </li>
           </ul>
 
@@ -51,7 +48,6 @@ export function renderExperienceSection(): HTMLElement {
             <span class="timeline-tech-badge">React.js</span>
             <span class="timeline-tech-badge">RBAC &amp; JWT</span>
             <span class="timeline-tech-badge">MongoDB</span>
-            <span class="timeline-tech-badge">REST APIs</span>
           </div>
         </div>
       </div>
@@ -66,19 +62,19 @@ export function renderExperienceSection(): HTMLElement {
           <div class="timeline-card-header">
             <div>
               <span class="timeline-role text-cyber font-mono">Bachelor of Engineering (B.E.), Computer Science</span>
-              <h3 class="timeline-company">University Institute of Technology, Burdwan University</h3>
+              <h3 class="timeline-company">UIT, Burdwan University</h3>
             </div>
             <span class="timeline-date font-mono">Expected: Aug 2027</span>
           </div>
 
           <p class="timeline-summary-text">
-            Specializing in Computer Science &amp; Engineering in West Bengal, India. Rigorous academic training in distributed software architecture, algorithmic complexity, and system design.
+            Specializing in Computer Science &amp; Engineering. Rigorous academic curriculum in distributed software architecture, data structures, algorithms, and system design.
           </p>
 
           <div class="coursework-box">
-            <span class="coursework-title font-mono text-cyber">Relevant Coursework</span>
+            <span class="coursework-title font-mono text-cyber">Key Coursework</span>
             <p class="coursework-list">
-              Data Structures &amp; Algorithms, Object-Oriented Programming (OOP), Database Management Systems (DBMS), Operating Systems, Computer Networks, and Software Engineering.
+              Data Structures &amp; Algorithms, OOP, Database Management Systems (DBMS), Operating Systems, Computer Networks, and Software Engineering.
             </p>
           </div>
         </div>

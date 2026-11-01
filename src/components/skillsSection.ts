@@ -1,3 +1,5 @@
+import { sound } from '../audio/soundManager';
+
 export function renderSkillsSection(): HTMLElement {
   const section = document.createElement('div');
   section.className = 'container';
@@ -6,38 +8,32 @@ export function renderSkillsSection(): HTMLElement {
     {
       category: 'Backend & APIs',
       icon: '⚡',
-      skills: ['Node.js', 'Express.js', 'REST APIs', 'JWT Auth', 'bcrypt', 'OAuth', 'Double-Entry Ledger', 'MVC Architecture'],
-      level: 95
+      skills: ['Node.js', 'Express.js', 'REST APIs', 'JWT & RBAC', 'bcrypt', 'MVC Pattern']
     },
     {
       category: 'Frontend Development',
       icon: '🖥️',
-      skills: ['React.js', 'Tailwind CSS', 'React Router', 'HTML5 & CSS3', 'Axios', 'Bootstrap', 'EJS', 'Responsive UI'],
-      level: 92
+      skills: ['React.js', 'Tailwind CSS', 'JavaScript (ES6+)', 'React Router', 'Responsive UI']
     },
     {
-      category: 'Databases & ORM',
+      category: 'Databases & Storage',
       icon: '🗄️',
-      skills: ['MongoDB', 'Mongoose', 'MySQL', 'Prisma ORM', 'Schema Design', 'Data Aggregation'],
-      level: 88
+      skills: ['MongoDB', 'Mongoose', 'MySQL', 'Prisma ORM', 'Schema Design']
     },
     {
-      category: 'Programming Languages',
+      category: 'Core Languages',
       icon: '💻',
-      skills: ['JavaScript (ES6+)', 'Java', 'Python', 'C', 'C++'],
-      level: 90
+      skills: ['JavaScript (ES6+)', 'Java', 'Python', 'C', 'C++']
     },
     {
-      category: 'Tools, Cloud & DevOps',
+      category: 'Cloud & DevOps',
       icon: '☁️',
-      skills: ['Git & GitHub', 'Postman', 'Render', 'AWS (Basics)', 'Cloudinary', 'Nodemon', 'dotenv'],
-      level: 86
+      skills: ['Git & GitHub', 'Postman', 'Render', 'AWS (Basics)', 'Cloudinary']
     },
     {
       category: 'CS Fundamentals',
       icon: '🧠',
-      skills: ['Data Structures & Algorithms', 'Object-Oriented Programming', 'Operating Systems', 'Computer Networks', 'Software Engineering'],
-      level: 94
+      skills: ['DSA', 'OOP Concepts', 'System Architecture', 'Operating Systems', 'DBMS']
     }
   ];
 
@@ -48,7 +44,7 @@ export function renderSkillsSection(): HTMLElement {
       </div>
       <h2 class="section-title">Skills &amp; Capabilities</h2>
       <p class="section-subtitle">
-        Battle-tested technologies employed across production full-stack systems, secure microservices, and AI pipelines.
+        Core technologies employed across production full-stack systems, secure microservices, and AI pipelines.
       </p>
     </div>
 
@@ -59,14 +55,9 @@ export function renderSkillsSection(): HTMLElement {
         <div class="cyber-card skill-group-card" data-aos="fade-up" data-aos-delay="${(idx % 3) * 100}">
           <div class="skill-group-header">
             <div class="skill-group-title">
-              <span class="skill-icon" aria-hidden="true">${cat.icon}</span>
+              <span class="skill-icon-box" aria-hidden="true">${cat.icon}</span>
               <h3>${cat.category}</h3>
             </div>
-            <span class="skill-group-pct font-mono text-cyber">${cat.level}%</span>
-          </div>
-
-          <div class="skill-progress-track">
-            <div class="skill-progress-bar" style="width: ${cat.level}%;"></div>
           </div>
 
           <div class="skill-tags">
@@ -78,6 +69,14 @@ export function renderSkillsSection(): HTMLElement {
         .join('')}
     </div>
   `;
+
+  // Attach hover sounds
+  setTimeout(() => {
+    const cards = section.querySelectorAll<HTMLElement>('.skill-group-card');
+    cards.forEach((card) => {
+      card.addEventListener('mouseenter', () => sound.playHover());
+    });
+  }, 0);
 
   return section;
 }
